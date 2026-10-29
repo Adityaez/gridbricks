@@ -20,3 +20,4 @@ def test_dashboard_date_validation():
     response = client.get("/api/dashboard?date=2026-02-01")
     assert response.status_code == 400
     assert "restricted" in response.json()["detail"].lower()
+

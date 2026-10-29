@@ -56,3 +56,4 @@ export const ForecastTable: React.FC<ForecastTableProps> = ({ intervals }) => {
     </div>
   );
 };
+

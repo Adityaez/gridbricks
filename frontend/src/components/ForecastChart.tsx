@@ -29,3 +29,4 @@ export const ForecastChart: React.FC<ForecastChartProps> = ({ data }) => {
     </div>
   );
 };
+

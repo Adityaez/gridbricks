@@ -46,3 +46,4 @@ def compute_metrics(
         "missing_forecasts": 0,
         "missing_actuals": 0,
     }
+

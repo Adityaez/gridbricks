@@ -28,3 +28,4 @@ export interface DashboardResponse {
   metrics: MetricsSummary;
   intervals: IntervalDataPoint[];
 }
+

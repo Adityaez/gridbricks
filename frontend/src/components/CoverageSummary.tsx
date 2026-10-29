@@ -37,3 +37,4 @@ export const CoverageSummary: React.FC<CoverageSummaryProps> = ({ metrics }) => 
     </div>
   );
 };
+

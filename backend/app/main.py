@@ -31,3 +31,4 @@ async def root():
         "version": settings.VERSION,
         "scope": f"{settings.START_DATE_LIMIT} to {settings.END_DATE_LIMIT}"
     }
+

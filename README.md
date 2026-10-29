@@ -68,3 +68,4 @@ Given $n$ valid matched pairs of selected forecast $F$ and actual generation $A$
 ## 6. AI-Use Disclosure
 
 Development of WindSight is assisted by AI coding assistants (Google Antigravity / Gemini 3.8 Flash) for scaffolding, documentation, and test-case structuring. All mathematical logic, cutoff mechanisms, and data schemas are strictly validated with automated deterministic unit tests.
+

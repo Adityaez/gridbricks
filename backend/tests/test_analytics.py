@@ -11,3 +11,4 @@ def test_metrics_empty_dataframe():
     assert result["rmse_mw"] is None
     assert result["wape_percent"] is None
     assert result["matched_intervals"] == 0
+

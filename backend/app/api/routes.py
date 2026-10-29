@@ -60,3 +60,4 @@ async def get_dashboard(
         ),
         intervals=[]
     )
+

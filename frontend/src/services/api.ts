@@ -10,3 +10,4 @@ export async function fetchDashboard(date: string, cutoffRule: string = 'day_ahe
   }
   return response.json();
 }
+

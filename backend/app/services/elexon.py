@@ -32,3 +32,4 @@ class ElexonClient:
         """
         # Skeleton implementation for Phase 0
         return pd.DataFrame(columns=["startTime", "publishTime", "generation"])
+
