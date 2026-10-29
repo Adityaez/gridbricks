@@ -31,6 +31,7 @@ class MetricsSummary(BaseModel):
 class DashboardResponse(BaseModel):
     delivery_date: date
     cutoff_rule: str
+    hourly_expansion: bool = Field(False, description="Whether hourly forecasts were expanded to half-hours")
     metrics: MetricsSummary
     intervals: List[IntervalDataPoint]
 
@@ -43,12 +44,29 @@ class DailyMetricItem(BaseModel):
 class AggregateAnalyticsResponse(BaseModel):
     date_from: date
     date_to: date
+    cutoff_rule: str
     aggregate_metrics: MetricsSummary
     daily_breakdown: List[DailyMetricItem]
+
+
+class ForecastEvolutionPoint(BaseModel):
+    publish_time: datetime = Field(..., description="When this forecast was published in UTC")
+    forecast_mw: float = Field(..., description="Forecast wind generation in MW")
+    cutoff_time: datetime = Field(..., description="Decision cutoff timestamp for the delivery interval")
+    is_pre_cutoff: bool = Field(..., description="True if published on or before decision cutoff")
+
+
+class ForecastEvolutionResponse(BaseModel):
+    delivery_date: date
+    interval_start: datetime
+    cutoff_rule: str
+    cutoff_time: datetime
+    selected_publish_time: Optional[datetime] = Field(None, description="Publication time of selected decision forecast")
+    selected_forecast_mw: Optional[float] = Field(None, description="Selected decision forecast MW")
+    revisions: List[ForecastEvolutionPoint]
 
 
 class HealthResponse(BaseModel):
     status: str
     timestamp: datetime
     version: str
-
