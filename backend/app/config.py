@@ -8,8 +8,8 @@ class Settings(BaseSettings):
     VERSION: str = "1.0.0"
     ENVIRONMENT: str = "development"
     
-    # Elexon API Configuration
-    ELEXON_API_BASE_URL: str = "https://bmrs.elexon.co.uk/api-documentation/endpoint/datasets"
+    # Elexon BMRS API Configuration
+    ELEXON_API_BASE_URL: str = "https://data.elexon.co.uk/bmrs/api/v1"
     ELEXON_API_KEY: str = ""
     
     # CORS Configuration
