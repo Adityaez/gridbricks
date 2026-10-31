@@ -1,9 +1,8 @@
-::: {align="center"}
 # 🌬️ WindSight
 
 ### Day-Ahead Wind Forecast Intelligence
 
-**Evaluate the forecast that was available at decision time --- not the
+**Evaluate the forecast that was available at decision time — not the
 one hindsight prefers.**
 
 A historical evaluation platform for UK national wind-generation
@@ -15,22 +14,15 @@ look-ahead-bias controls visible.
 Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel)](https://gridbricks-five.vercel.app/)
 [![API](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://windsight-api-rd5o.onrender.com/docs)
 [![Pilot](https://img.shields.io/badge/Evaluation-January%202026-2563EB?style=for-the-badge)](#evaluation-scope)
-:::
 
-```{=html}
-<p align="center">
-```
-`<img alt="Python" src="https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white">`{=html}
-`<img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white">`{=html}
-`<img alt="React" src="https://img.shields.io/badge/React-UI-61DAFB?style=flat-square&logo=react&logoColor=20232A">`{=html}
-`<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-Frontend-3178C6?style=flat-square&logo=typescript&logoColor=white">`{=html}
-`<img alt="Vite" src="https://img.shields.io/badge/Vite-Build-646CFF?style=flat-square&logo=vite&logoColor=white">`{=html}
-`<img alt="Pandas" src="https://img.shields.io/badge/Pandas-Analytics-150458?style=flat-square&logo=pandas&logoColor=white">`{=html}
-`<img alt="Recharts" src="https://img.shields.io/badge/Recharts-Visualization-22A699?style=flat-square">`{=html}
-`<img alt="Docker" src="https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white">`{=html}
-```{=html}
-</p>
-```
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-UI-61DAFB?style=flat-square&logo=react&logoColor=20232A)
+![TypeScript](https://img.shields.io/badge/TypeScript-Frontend-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Analytics-150458?style=flat-square&logo=pandas&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-Visualization-22A699?style=flat-square)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
 **Live application:** https://gridbricks-five.vercel.app/\
 **Backend API:** https://windsight-api-rd5o.onrender.com\
 **Interactive API documentation:**
@@ -40,31 +32,31 @@ https://windsight-api-rd5o.onrender.com/docs
 
 ## Table of Contents
 
--   [Project Overview](#project-overview)
--   [Problem Statement](#problem-statement)
--   [Key Features](#key-features)
--   [Evaluation Scope](#evaluation-scope)
--   [Data Sources](#data-sources)
--   [System Architecture](#system-architecture)
--   [Application Walkthrough](#application-walkthrough)
--   [Forecast Selection and Look-Ahead
+- [Project Overview](#project-overview)
+- [Problem Statement](#problem-statement)
+- [Key Features](#key-features)
+- [Evaluation Scope](#evaluation-scope)
+- [Data Sources](#data-sources)
+- [System Architecture](#system-architecture)
+- [Application Walkthrough](#application-walkthrough)
+- [Forecast Selection and Look-Ahead
     Bias](#forecast-selection-and-look-ahead-bias)
--   [Hourly-to-Half-Hourly Expansion](#hourly-to-half-hourly-expansion)
--   [Evaluation Metrics](#evaluation-metrics)
--   [API Reference](#api-reference)
--   [Technology Stack](#technology-stack)
--   [Repository Structure](#repository-structure)
--   [Run Locally](#run-locally)
--   [Docker](#docker)
--   [Deployment](#deployment)
--   [Configuration and Environment
+- [Hourly-to-Half-Hourly Expansion](#hourly-to-half-hourly-expansion)
+- [Evaluation Metrics](#evaluation-metrics)
+- [API Reference](#api-reference)
+- [Technology Stack](#technology-stack)
+- [Repository Structure](#repository-structure)
+- [Run Locally](#run-locally)
+- [Docker](#docker)
+- [Deployment](#deployment)
+- [Configuration and Environment
     Variables](#configuration-and-environment-variables)
--   [Validation and Testing](#validation-and-testing)
--   [Known Limitations](#known-limitations)
--   [Security and Data Handling](#security-and-data-handling)
--   [AI Assistance Disclosure](#ai-assistance-disclosure)
--   [Future Improvements](#future-improvements)
--   [Author](#author)
+- [Validation and Testing](#validation-and-testing)
+- [Known Limitations](#known-limitations)
+- [Security and Data Handling](#security-and-data-handling)
+- [AI Assistance Disclosure](#ai-assistance-disclosure)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
 ------------------------------------------------------------------------
 
@@ -83,13 +75,13 @@ point in time.
 
 WindSight provides three analytical views:
 
-1.  **Daily Dashboard** --- compares selected day-ahead forecasts with
+1. **Daily Dashboard** — compares selected day-ahead forecasts with
     realized generation at settlement-interval level and reports
     accuracy metrics and data coverage.
-2.  **Forecast Evolution** --- displays how the forecast for a selected
+2.  **Forecast Evolution** — displays how the forecast for a selected
     delivery interval changed across publication revisions, including
     the cutoff and selected decision forecast.
-3.  **Range Analytics** --- aggregates forecast accuracy over a selected
+3.  **Range Analytics** — aggregates forecast accuracy over a selected
     date range and presents daily metric breakdowns.
 
 The application is an analytical pilot and demonstration platform. It is
@@ -185,20 +177,20 @@ semantics should always be considered when interpreting results.
 
 ### Out of scope
 
--   Electricity price or imbalance-price forecasting
--   Consumer or system-demand forecasting
--   Trading signals or automated bidding
--   Procurement optimization
--   Financial return, savings, or P&L calculations
--   Network constraint or balancing-action forecasts
--   Guarantees that historical forecast accuracy will continue in future
+- Electricity price or imbalance-price forecasting
+- Consumer or system-demand forecasting
+- Trading signals or automated bidding
+- Procurement optimization
+- Financial return, savings, or P&L calculations
+- Network constraint or balancing-action forecasts
+- Guarantees that historical forecast accuracy will continue in future
     periods
 
 ## Data Sources
 
 WindSight uses Elexon BMRS data streams for the historical pilot.
 
-### WINDFOR --- wind generation forecasts
+### WINDFOR — wind generation forecasts
 
 The `WINDFOR` stream provides wind-generation forecast publications. The
 publication timestamp is important because the same delivery interval
@@ -208,7 +200,7 @@ WindSight uses forecast delivery information and publication time to
 determine which forecast revision was available by the configured
 cutoff.
 
-### FUELHH --- realized generation
+### FUELHH — realized generation
 
 The `FUELHH` stream provides half-hourly generation data by fuel type.
 For this pilot, actual generation is filtered to wind records
@@ -217,14 +209,14 @@ selected forecast is evaluated.
 
 ### Data handling principles
 
--   Forecast and actual values are compared after their delivery
+- Forecast and actual values are compared after their delivery
     intervals have been aligned.
--   Publication time is retained for forecast eligibility and revision
+- Publication time is retained for forecast eligibility and revision
     analysis.
--   Missing forecast and actual values are represented as missing
+- Missing forecast and actual values are represented as missing
     coverage, not silently treated as zero.
--   Data resolution differences are made visible in the dashboard.
--   Results depend on the completeness and timestamp quality of upstream
+- Data resolution differences are made visible in the dashboard.
+- Results depend on the completeness and timestamp quality of upstream
     data.
 
 **Data provider:** [Elexon](https://www.elexon.co.uk/)
@@ -264,7 +256,7 @@ configuration must include the deployed Vercel origin.
 
 ### Request lifecycle
 
-1.  A user selects a delivery date, date range, cutoff rule, or
+1. A user selects a delivery date, date range, cutoff rule, or
     forecast-evolution interval.
 2.  The frontend sends the corresponding request to FastAPI.
 3.  The backend obtains the required forecast and actual records from
@@ -308,25 +300,27 @@ Range Analytics aggregates forecast performance over a selected date range, show
 
 This is the core analytical safeguard in WindSight.
 
-For a delivery interval (t), let (C(t)) represent the configured
+For a delivery interval \(t\), let \(C(t)\) represent the configured
 decision cutoff timestamp. A forecast publication is eligible only if:
 
-\[ `\text{publishTime}`{=tex} `\leq `{=tex}C(t) \]
+$$
+publishTime(f) \leq C(t)
+$$
 
 If multiple forecast publications exist for the same delivery interval,
 WindSight selects the **latest eligible publication**:
 
-\[ F_t\^\* =
-`\underset{f \in \mathcal{F}_t,\; publishTime(f)\leq C(t)}`{=tex}
-{`\operatorname{arg\,max}`{=tex}} ; publishTime(f) \]
+$$
+f_t^* = \operatorname*{arg\,max}_{f \in \mathcal{F}_t,\; publishTime(f) \leq C(t)} publishTime(f)
+$$
 
 Where:
 
--   (`\mathcal{F}`{=tex}\_t) is the set of forecast publications for
+- (`\mathcal{F}\_t) is the set of forecast publications for
     delivery interval (t);
--   `publishTime(f)` is the publication timestamp of forecast (f);
--   (C(t)) is the configured cutoff for interval (t); and
--   (F_t\^\*) is the forecast selected for decision-time evaluation.
+- `publishTime(f)` is the publication timestamp of forecast (f);
+- (C(t)) is the configured cutoff for interval (t); and
+- (F_t\^\*) is the forecast selected for decision-time evaluation.
 
 A historical dataset may contain revisions published after the decision
 cutoff. Those revisions may be useful in Forecast Evolution, but they
@@ -374,37 +368,37 @@ When quoting results, state whether hourly expansion was enabled.
 
 For (n) valid matched intervals, define:
 
--   (F_i): selected forecast generation for interval (i), in MW;
--   (A_i): realized actual generation for interval (i), in MW;
--   (e_i = F_i - A_i): signed forecast error.
+- (F_i): selected forecast generation for interval (i), in MW;
+- (A_i): realized actual generation for interval (i), in MW;
+- (e_i = F_i - A_i): signed forecast error.
 
 ### Mean Absolute Error (MAE)
 
-\[ MAE = `\frac{1}{n}`{=tex}`\sum`{=tex}\_{i=1}\^{n}\|F_i-A_i\| \]
+\[ MAE = `\frac{1}{n}`\sum\_{i=1}\^{n}\|F_i-A_i\| \]
 
 Lower MAE indicates smaller average absolute error.
 
 ### Root Mean Squared Error (RMSE)
 
-\[ RMSE = `\sqrt{\frac{1}{n}\sum_{i=1}^{n}(F_i-A_i)^2}`{=tex} \]
+\[ RMSE = `\sqrt{\frac{1}{n}\sum_{i=1}^{n}(F_i-A_i)^2} \]
 
 RMSE penalizes larger errors more strongly.
 
 ### Signed Bias
 
-\[ Bias = `\frac{1}{n}`{=tex}`\sum`{=tex}\_{i=1}\^{n}(F_i-A_i) \]
+\[ Bias = `\frac{1}{n}`\sum\_{i=1}\^{n}(F_i-A_i) \]
 
--   Positive bias: forecasts are higher than actual generation on
+- Positive bias: forecasts are higher than actual generation on
     average (over-forecast).
--   Negative bias: forecasts are lower than actual generation on average
+- Negative bias: forecasts are lower than actual generation on average
     (under-forecast).
--   Bias near zero does not necessarily mean forecasts are accurate;
+- Bias near zero does not necessarily mean forecasts are accurate;
     positive and negative errors can cancel.
 
 ### Weighted Absolute Percentage Error (WAPE)
 
-\[ WAPE = `\frac{\sum_{i=1}^{n}|F_i-A_i|}`{=tex}
-{`\sum`{=tex}\_{i=1}\^{n}\|A_i\|} `\times 100`{=tex}% \]
+\[ WAPE = `\frac{\sum_{i=1}^{n}|F_i-A_i|}
+{`\sum\_{i=1}\^{n}\|A_i\|} `\times 100% \]
 
 WAPE expresses total absolute error relative to total absolute actual
 generation. If the denominator is zero, the metric should be
@@ -442,11 +436,11 @@ does not mean that 48 independent forecast publications were available.
 
 The backend exposes an OpenAPI specification and interactive Swagger UI.
 
--   **Production API root:** https://windsight-api-rd5o.onrender.com/
--   **Swagger UI:** https://windsight-api-rd5o.onrender.com/docs
--   **OpenAPI JSON:**
+- **Production API root:** https://windsight-api-rd5o.onrender.com/
+- **Swagger UI:** https://windsight-api-rd5o.onrender.com/docs
+- **OpenAPI JSON:**
     https://windsight-api-rd5o.onrender.com/openapi.json
--   **Health endpoint:**
+- **Health endpoint:**
     https://windsight-api-rd5o.onrender.com/api/health
 
 ### Endpoints
@@ -596,10 +590,10 @@ gridbricks/
 
 ### Prerequisites
 
--   Git
--   Python 3.11
--   Node.js and npm
--   Optional: Docker Desktop with Docker Compose
+- Git
+- Python 3.11
+- Node.js and npm
+- Optional: Docker Desktop with Docker Compose
 
 Clone the repository:
 
@@ -608,7 +602,7 @@ git clone https://github.com/Adityaez/gridbricks.git
 cd gridbricks
 ```
 
-### Backend setup --- Windows PowerShell
+### Backend setup — Windows PowerShell
 
 ``` powershell
 cd backend
@@ -624,11 +618,11 @@ uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 
 Local backend URLs:
 
--   API root: http://127.0.0.1:8000/
--   Swagger UI: http://127.0.0.1:8000/docs
--   Health check: http://127.0.0.1:8000/api/health
+- API root: http://127.0.0.1:8000/
+- Swagger UI: http://127.0.0.1:8000/docs
+- Health check: http://127.0.0.1:8000/api/health
 
-### Backend setup --- macOS/Linux
+### Backend setup — macOS/Linux
 
 ``` bash
 cd backend
@@ -726,7 +720,7 @@ WindSight is deployed as two services.
   Health check            Render                  https://windsight-api-rd5o.onrender.com/api/health
   ----------------------------------------------------------------------------------------------------
 
-### Frontend deployment --- Vercel
+### Frontend deployment — Vercel
 
 The deployed Vercel project uses the GitHub repository and the `main`
 branch.
@@ -746,7 +740,7 @@ Vercel environment variable:
 VITE_API_BASE_URL=https://windsight-api-rd5o.onrender.com
 ```
 
-### Backend deployment --- Render
+### Backend deployment — Render
 
 The backend is deployed as a Python web service from the `backend/`
 directory.
@@ -816,12 +810,12 @@ configuration keys.
 
 ### Secrets
 
--   Never commit `.env`, API keys, database passwords, or private
+- Never commit `.env`, API keys, database passwords, or private
     connection strings.
--   Keep `.env.example` limited to placeholder values.
--   Configure production secrets in hosting-provider environment
+- Keep `.env.example` limited to placeholder values.
+- Configure production secrets in hosting-provider environment
     settings.
--   If a secret was ever committed, rotate it; deleting it in a later
+- If a secret was ever committed, rotate it; deleting it in a later
     commit does not remove it from Git history.
 
 ## Validation and Testing
@@ -830,17 +824,17 @@ configuration keys.
 
 The following checks were performed during deployment validation:
 
--   Render health endpoint returned HTTP `200 OK`.
--   FastAPI Swagger UI loaded from the deployed backend.
--   Vercel frontend loaded and successfully displayed data from the
+- Render health endpoint returned HTTP `200 OK`.
+- FastAPI Swagger UI loaded from the deployed backend.
+- Vercel frontend loaded and successfully displayed data from the
     Render API.
--   Daily Dashboard displayed forecast/actual metrics and settlement
+- Daily Dashboard displayed forecast/actual metrics and settlement
     interval details.
--   January 28, 2026 dashboard data loaded.
--   Hourly expansion changed coverage from 24/48 (50%) to 48/48 (100%)
+- January 28, 2026 dashboard data loaded.
+- Hourly expansion changed coverage from 24/48 (50%) to 48/48 (100%)
     for the tested January 28 view.
--   Forecast Evolution displayed revision history for January 14, 2026.
--   Range Analytics displayed aggregate metrics and daily accuracy
+- Forecast Evolution displayed revision history for January 14, 2026.
+- Range Analytics displayed aggregate metrics and daily accuracy
     breakdown for January 1--15, 2026.
 
 These are deployment smoke-test observations, not a claim that every
@@ -859,26 +853,26 @@ actual result before claiming the test suite passes.
 
 ### Recommended analytical test cases
 
--   Latest eligible forecast is selected when multiple publications
+- Latest eligible forecast is selected when multiple publications
     exist.
--   A forecast published after the cutoff is not selected as the
+- A forecast published after the cutoff is not selected as the
     decision-time forecast.
--   A publication exactly at the cutoff is handled according to the
+- A publication exactly at the cutoff is handled according to the
     inclusive comparison rule.
--   Forecast and actual intervals align correctly.
--   Missing forecasts and missing actuals are counted independently.
--   Hourly expansion maps the hourly value to the intended two half-hour
+- Forecast and actual intervals align correctly.
+- Missing forecasts and missing actuals are counted independently.
+- Hourly expansion maps the hourly value to the intended two half-hour
     intervals.
--   MAE, RMSE, signed bias, and WAPE match hand-calculated examples.
--   WAPE handles a zero actual-value denominator safely.
--   Invalid dates and reversed date ranges are rejected.
--   Forecast evolution orders revisions by publication timestamp.
--   API errors are returned with appropriate status codes.
--   Frontend requests use the configured production API base URL.
+- MAE, RMSE, signed bias, and WAPE match hand-calculated examples.
+- WAPE handles a zero actual-value denominator safely.
+- Invalid dates and reversed date ranges are rejected.
+- Forecast evolution orders revisions by publication timestamp.
+- API errors are returned with appropriate status codes.
+- Frontend requests use the configured production API base URL.
 
 ## Known Limitations
 
-1.  **Historical pilot:** The evaluation window is January 2026. It
+1. **Historical pilot:** The evaluation window is January 2026. It
     should not be represented as a live operational forecasting service.
 2.  **Cutoff assumption:** The 17:00 day-ahead cutoff is a pilot
     assumption unless independently validated against the relevant
@@ -899,15 +893,15 @@ actual result before claiming the test suite passes.
 
 ## Security and Data Handling
 
--   Keep provider credentials and database connection strings in
+- Keep provider credentials and database connection strings in
     environment variables.
--   Do not expose backend secrets through frontend `VITE_` variables;
+- Do not expose backend secrets through frontend `VITE_` variables;
     Vite variables are bundled into browser code.
--   Restrict CORS to known frontend origins rather than using
+- Restrict CORS to known frontend origins rather than using
     unrestricted wildcard origins in production.
--   Avoid committing real `.env` files or private data.
--   Review Git history if credentials have ever been committed.
--   Use HTTPS for deployed frontend and backend communication.
+- Avoid committing real `.env` files or private data.
+- Review Git history if credentials have ever been committed.
+- Use HTTPS for deployed frontend and backend communication.
 
 ## AI Assistance Disclosure
 
@@ -926,35 +920,37 @@ substitute for a complete automated test report.
 
 ## Future Improvements
 
--   Add downloadable CSV exports for interval-level and range-level
+- Add downloadable CSV exports for interval-level and range-level
     results.
--   Add more explicit source-data freshness and ingestion status
+- Add more explicit source-data freshness and ingestion status
     indicators.
--   Add automated tests for cutoff boundaries, interval alignment, and
+- Add automated tests for cutoff boundaries, interval alignment, and
     metric edge cases.
--   Add a reproducible historical data-ingestion command and documented
+- Add a reproducible historical data-ingestion command and documented
     database schema.
--   Add richer filters for forecast publication and delivery intervals.
--   Add responsive layouts and accessibility checks for charts and
+- Add richer filters for forecast publication and delivery intervals.
+- Add responsive layouts and accessibility checks for charts and
     tables.
--   Add monitoring for API availability and upstream data-fetch
+- Add monitoring for API availability and upstream data-fetch
     failures.
--   Expand the evaluation period only after data quality and timestamp
+- Expand the evaluation period only after data quality and timestamp
     handling are validated.
 
 ## Author
 
 **Aditya Sharma**\
-B.Tech --- Computer Science and Engineering
+B.Tech — Computer Science and Engineering
 
--   GitHub: https://github.com/Adityaez
--   Repository: https://github.com/Adityaez/gridbricks
--   Live project: https://gridbricks-five.vercel.app/
+- GitHub: https://github.com/Adityaez
+- Repository: https://github.com/Adityaez/gridbricks
+- Live project: https://gridbricks-five.vercel.app/
 
 ------------------------------------------------------------------------
 
-::: {align="center"}
-**WindSight --- Transparent, cutoff-aware wind forecast evaluation.**
+**
+---
+
+**WindSight — Transparent, cutoff-aware wind forecast evaluation.****
 
 *Evaluate the information available then, not the information revealed
 later.*
